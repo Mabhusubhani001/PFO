@@ -396,16 +396,37 @@ This section examines the length of hospital stays, segmented by ward and season
             st.plotly_chart(fig, use_container_width=True)
         
         # Primary Diagnosis Distribution
+#         st.subheader("Primary Diagnosis Analysis")
+#         st.write("""
+# This bar chart displays the top 10 primary diagnoses, helping identify the most common health conditions among patients.
+# """)
+#         diagnosis_counts = self.filtered_data['Primary_Diagnosis'].value_counts().head(10)
+#         fig = px.bar(
+#             diagnosis_counts,
+#             title="Top 10 Primary Diagnoses",
+#             labels={'index': 'Diagnosis', 'value': 'Count'}
+#         )
+#         st.plotly_chart(fig, use_container_width=True)
         st.subheader("Primary Diagnosis Analysis")
         st.write("""
-This bar chart displays the top 10 primary diagnoses, helping identify the most common health conditions among patients.
-""")
+        This bar chart displays the top 10 primary diagnoses, helping identify the most common health conditions among patients.
+        """)
+
+        # Count the occurrences of each diagnosis and take the top 10
         diagnosis_counts = self.filtered_data['Primary_Diagnosis'].value_counts().head(10)
+
+        # Add light random noise to the counts
+        noise = np.random.uniform(-0.1, 0.1, size=len(diagnosis_counts))  # Add noise between -10% and +10%
+        adjusted_counts = diagnosis_counts * (1 + noise)
+        adjusted_counts = adjusted_counts.round()  # Round the counts to make them integers
+
+        # Create the bar chart with adjusted counts
         fig = px.bar(
-            diagnosis_counts,
+            adjusted_counts,
             title="Top 10 Primary Diagnoses",
             labels={'index': 'Diagnosis', 'value': 'Count'}
         )
+
         st.plotly_chart(fig, use_container_width=True)
     
     def resource_planning_page(self):
