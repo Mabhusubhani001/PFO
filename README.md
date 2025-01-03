@@ -5,7 +5,7 @@
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.12.0-orange.svg)](https://tensorflow.org/)
 
 
-## 🏆 Tech4Tomorrow Hackathon 
+## 🏆 Tech4Tomorrow Hackathon Project
 This project was developed as part of the **Tech4Tomorrow: Engineering Solutions for a Better Future** hackathon under the theme:
 ### "AI and Machine Learning for Healthcare"
 
