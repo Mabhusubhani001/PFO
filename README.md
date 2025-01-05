@@ -14,7 +14,7 @@ Our team focused on revolutionizing hospital operations and patient care through
 - Optimizing patient flow management
 - Predicting resource requirements
 - Improving operational efficiency
-- Enhancing decision-making through data-driven insights
+- Enhancing decision-making through data-driven insights.
 
 ## 📋 Table of Contents
 - [Overview](#overview)
